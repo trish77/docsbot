@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DocsBot - Your Document Finder </title>
+  <link rel="SHORTCUT ICON" href="dist/favicon.ico"/>
+  <link href="./favicon.ico" type="image/x-icon" rel="icon" />
+<link href="dist/assets/css/app.min.css" type="text/css" rel="stylesheet">
+
+<script src="dist/assets/js/app.min.js"></script>
+  <style>
+    p, ul li { font-size: 13px; font-weight: normal}
+    ol li { font-size: 16px; font-weight: bold }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Page header start -->
+  <div class="page-title">
+    <div class="row py-3">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+        <h3 class="title">DocsBot</h3>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"> </div>
+    </div>
+  </div>
+  <!-- Page header end -->
+
+  <!-- Content wrapper start -->
+  <div class="content-wrapper bg-delinquent bg-opacity-10">
+
+    <!-- Row start -->
+    <div class="row gutters">
+
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+        <div class="card m-0">
+
+          <!-- Row start -->
+          <div class="row bg-success-lt bg-opacity-10 g-0">
+            <div class="col-6 border-end">
+               <!-- <div class="chat-search-box">
+                  <div class="input-group">
+                    <input class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-info">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>-->
+                <div class="chat-container">
+                  <ul class="chat-box chatContainerScroll ps-0">
+                    <li class="chat-left animated fadeIn">
+                      <div class="chat-avatar">
+                        <img src="dist/assets/img/docsbot.png" alt="Your Document Getter">
+                      </div>
+                      <div class="chat-text"><h4 class="font-weight-light">Hello, I'm DocsBot, your Document Getter. <br>
+                        What can I find for you?</h4></div>
+                    </li>
+                    <li id="moreDetails" class="chat-left animated fadeIn d-none">
+                      <div class="chat-text card px-3 py-2">I need more details please?</div>
+                    </li>
+                    <li id="docResult" class="chat-left animated fadeIn d-none">
+                      <div class="chat-text">
+                        <div class="card px-3 py-2">
+                          <ol>
+                            <li><a target="_blank" href="https://hstm-corp.visualstudio.com/hStream%20Platform/_wiki/wikis/PaaS%20Documentation/777/Technology-Documentation-Hub">Technology Documentation Hub</a>
+                            </li>
+                            <ul>
+                              <li>
+                                <ul class="my-3 ps-0">
+                                  <li style="font-size: 14px; font-weight: normal">
+                                    <a href="/hStream%20Platform/_wiki/wikis/PaaS%20Documentation?wikiVersion=GBdev&amp;pagePath=/Guides%20And%20Conventions/Technology%20Documentation%20Hub%20Guidelines" class=""><strong mlp="9">Guidelines for using the Technology Documentation Hub</strong></a></li>
+                                  <li style="font-size: 14px; font-weight: normal">Owners: <a href="mailto:aaron.stranahan@healthstream.com" class="">Aaron Stranahan</a>, <a href="mailto:matt.wilson@healthstream.com" class="">Matt Wilson</a>, <a href="mailto:mehar.sudha.allam@healthstream.com" class="">Mehar Sudha Allam</a></li>
+                                  <li style="font-size: 14px; font-weight: normal">Access: <a href="/hStream%20Platform/_wiki/wikis/PaaS%20Documentation?wikiVersion=GBdev&amp;pagePath=/Guides%20And%20Conventions/Technology%20Documentation%20Hub%20Guidelines&amp;anchor=access" class="">HowTo - Tech Docs Hub Access Requests</a></li>
+                                  <li style="font-size: 14px; font-weight: normal">Reviewers: IT Content Owners, IT Designees, Technical Communicator-TBD</li>
+                                  <li style="font-size: 14px; font-weight: normal">Review Cycle: As recommended by section and/or page.</li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <li>
+                              <a target="_blank" href="https://hstm-corp.visualstudio.com/hStream%20Platform/_wiki/wikis/PaaS%20Documentation/6128/GDE-HLC-Dev-Machine-Setup">GDE - HLC Dev Machine Setup</a>
+                            </li>
+                            <ul class="mt-2">
+                              <li>
+                                <p>This is a Guide on how to initially set up a dev computer to run the HLC.</p>
+                              </li>
+                            </ul>
+                            <li>
+                              <a target="_blank" href="https://hstm-corp.visualstudio.com/hStream%20Platform/_wiki/wikis/PaaS%20Documentation/2504/CONV-HLC-Coding-Conventions">CONV - HLC Coding Conventions</a>
+                            </li>
+                            <ul class="mt-2">
+                              <li>
+                                <p>HLC Software Developers should adhere as closely as possible to the following conventions. Following these conventions will improve the success of code reviews as well as deployments and customer experience</p>
+                              </li>
+                            </ul>
+                            <li>
+                              <a target="_blank" href="https://hstm-corp.visualstudio.com/hStream%20Platform/_wiki/wikis/PaaS%20Documentation/755/Guides-And-Conventions">Guides And Conventions</a>
+                            </li>
+                              <ul class="mt-2">
+                                <li>
+                                  <h5>Terminology</h5>
+                                  <p><b>Guide (GDE)</b>: A document that offers information or instruction; guidebook.</p>
+                                  <p><b>Convention (CONV)</b>: A generally accepted principle, method, or behavior emphasized by HealthStream management. Similar to a Policy.</p>
+                                  <p><b>Best Practice (BP)</b>: How an individual team implements a convention or policy. A method or technique that has been generally accepted as superior to alternatives because it produces superior results versus those achieved by other means or because it has become a standard way of doing things. Implements a convention or standard.</p>
+                                  <p><b>Standard Operating Procedure (SOP)</b>: Guide, Procedure that may or may not be best practice. Ex. A DBA SOP for Developers but is not best practice.</p>
+                                  <p><b>Policy (POL)</b>: A statement of intent implemented as a procedure or protocol as adopted by a governance body, e.g. HealthStream, SOX, GDPR, CCPA, etc.</p>
+                                  <p><b>HowTo (HOW)</b>: Something, such as a book or learning situation, that provides practical advice and detailed instruction in an activity.</p>
+                                  <p><b>Template (TMPL)</b>: An electronic file with a predesigned, customized format and structure ready to be filled in.</p>
+                                </li>
+                              </ul>
+                          </ol>
+                        </div>
+                        <div class="card px-3 py-2">
+                          Do you need more? Was the response not what you are looking for? You can tell me.
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-6">
+              <div class="chat-container">
+                <ul class="chat-box chatContainerScroll">
+                  <li class="chat-right">
+                      <span id="demo" class="card px-3 py-2"></span>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <form action="">
+          <div class="row g-0 bg-success-lt bg-opacity-10 border-top">
+            <div class="col">
+              <div class="form-group mt-3 mb-0 p-2">
+                <div class="input-group">
+                  <textarea id="textInput" type="text"  onkeyup="setValue()" placeholder="Type your message here..."></textarea>
+                  <div class="input-group-append">
+                    <button id="send" type="submit" class="d-flex align-items-end border-0 bg-white"><img class="send-btn" src="assets/img/send-o.png" alt="Send"></button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          </form>
+          <!-- Row end -->
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Row end -->
+
+  </div>
+  <!-- Content wrapper end -->
+
+</div>
+<script>
+  function setValue() {
+    var x = document.getElementById("textInput").value;
+    document.getElementById("demo").innerHTML = x;
+  }
+</script>
+<script>
+
+    $("#send").on("click", function ( e ) {
+        e.preventDefault()
+        $("#docResult").removeClass("d-none").addClass("d-block");
+
+    })
+
+
+
+
+</script>
+
+</body>
+</html>

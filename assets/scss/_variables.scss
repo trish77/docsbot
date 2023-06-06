@@ -1,0 +1,912 @@
+// Bootstrap overrides variables
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #fafafa;
+$gray-200: #F0F1F1;
+$gray-300: #E6EAEA;
+$gray-400: #CED4D5;
+$gray-500: #CED4D5;
+$gray-600: #9EA9AC;
+$gray-700: #6D7E82;
+$gray-800: #3E5359;
+$gray-900: #0C272F;
+$black: #16353F;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+// scss-docs-start color-variables
+$blue: #0C75E0;
+$indigo: #6610f2;
+$purple: #8A71F6;
+$pink: #FA8A71;
+$peach: #FE9881;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #FEDF82;
+$green: #00BA7C;
+$green80: #57C896;
+$green60: #85D6B1;
+$green40: #AFE3CC;
+$teal: #4571A0;
+$cyan: #0dcaf0;
+$greyBlue: #7495B8;
+$ltGreyBlue: #A3B9D0;
+$exemptBlue: #A3B9D0;
+$darkBlue: #0D4E88;
+$darkBlue80: #4571A0;
+$success-lt: #D8F2E5;
+$primary: $gray-700;
+$secondary: $gray-600;
+$mute-blue: $greyBlue;
+$fade-blue: $ltGreyBlue;
+$delinquent: $greyBlue;
+$default: $gray-400;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$past-due: $peach;
+$danger: $red;
+$success-lt: $success-lt;
+$light: $gray-100;
+$med: $gray-600;
+$dark: $gray-800;
+
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+                (
+                        "primary": $primary,
+                        "secondary": $secondary,
+                        "mute-blue": $greyBlue,
+                        "fade-blue": $ltGreyBlue,
+                        "default": $default,
+                        "attention": $orange,
+                        "success": $success,
+                        "info": $info,
+                        "warning": $warning,
+                        "peach": $peach,
+                        "pink": $pink,
+                        "past-due": $peach,
+                        "on-time": $green80,
+                        "late": $green60,
+                        "failed": $green40,
+                        "exempt": $ltGreyBlue,
+                        "not-assg": $darkBlue80,
+                        "delinquent": $delinquent,
+                        "danger": $danger,
+                        "success-lt": $success-lt,
+                        "light": $light,
+                        "med": $med,
+                        "dark": $dark
+                ),
+                $theme-colors
+);
+
+$blue-100: tint-color($blue, 10%) !default;
+$blue-200: tint-color($blue, 20%) !default;
+$blue-300: tint-color($blue, 30%) !default;
+$blue-400: tint-color($blue, 40%) !default;
+$blue-500: $blue !default;
+$blue-600: shade-color($blue, 60%) !default;
+$blue-700: shade-color($blue, 70%) !default;
+$blue-800: shade-color($blue, 80%) !default;
+$blue-900: shade-color($blue, 90%) !default;
+
+$pink-100: tint-color($pink, 10%) !default;
+$pink-200: tint-color($pink, 20%) !default;
+$pink-300: tint-color($pink, 30%) !default;
+$pink-400: tint-color($pink, 40%) !default;
+$pink-500: $pink !default;
+$pink-600: shade-color($pink, 60%) !default;
+$pink-700: shade-color($pink, 70%) !default;
+$pink-800: shade-color($pink, 80%) !default;
+$pink-900: shade-color($pink, 90%) !default;
+
+$green-100: tint-color($green, 10%) !default;
+$green-200: tint-color($green, 20%) !default;
+$green-300: tint-color($green, 30%) !default;
+$green-400: tint-color($green, 40%) !default;
+$green-500: $green !default;
+$green-600: shade-color($green, 60%) !default;
+$green-700: shade-color($green, 70%) !default;
+$green-800: shade-color($green, 80%) !default;
+$green-900: shade-color($green, 90%) !default;
+
+$red-100: tint-color($red, 10%) !default;
+$red-200: tint-color($red, 20%) !default;
+$red-300: tint-color($red, 30%) !default;
+$red-400: tint-color($red, 40%) !default;
+$red-500: $red !default;
+$red-600: shade-color($red, 60%) !default;
+$red-700: shade-color($red, 70%) !default;
+$red-800: shade-color($red, 80%) !default;
+$red-900: shade-color($red, 90%) !default;
+
+$orange-100: tint-color($orange, 10%) !default;
+$orange-200: tint-color($orange, 20%) !default;
+$orange-300: tint-color($orange, 30%) !default;
+$orange-400: tint-color($orange, 40%) !default;
+$orange-500: $orange !default;
+$orange-600: shade-color($orange, 60%) !default;
+$orange-700: shade-color($orange, 70%) !default;
+$orange-800: shade-color($orange, 80%) !default;
+$orange-900: shade-color($orange, 90%) !default;
+
+$blues: (
+        "blue-100": $blue-100,
+        "blue-200": $blue-200,
+        "blue-300": $blue-300,
+        "blue-400": $blue-400,
+        "blue-500": $blue-500,
+        "blue-600": $blue-600,
+        "blue-700": $blue-700,
+        "blue-800": $blue-800,
+        "blue-900": $blue-900
+) !default;
+
+
+$pinks: (
+        "pink-100": $pink-100,
+        "pink-200": $pink-200,
+        "pink-300": $pink-300,
+        "pink-400": $pink-400,
+        "pink-500": $pink-500,
+        "pink-600": $pink-600,
+        "pink-700": $pink-700,
+        "pink-800": $pink-800,
+        "pink-900": $pink-900
+) !default;
+
+$greens: (
+        "green-100": $green-100,
+        "green-200": $green-200,
+        "green-300": $green-300,
+        "green-400": $green-400,
+        "green-500": $green-500,
+        "green-600": $green-600,
+        "green-700": $green-700,
+        "green-800": $green-800,
+        "green-900": $green-900
+) !default;
+
+$reds: (
+        "red-100": $red-100,
+        "red-200": $red-200,
+        "red-300": $red-300,
+        "red-400": $red-400,
+        "red-500": $red-500,
+        "red-600": $red-600,
+        "red-700": $red-700,
+        "red-800": $red-800,
+        "red-900": $red-900
+) !default;
+
+$oranges: (
+        "orange-100": $orange-100,
+        "orange-200": $orange-200,
+        "orange-300": $orange-300,
+        "orange-400": $orange-400,
+        "orange-500": $orange-500,
+        "orange-600": $orange-600,
+        "orange-700": $orange-700,
+        "orange-800": $orange-800,
+        "orange-900": $orange-900
+) !default;
+
+$border-width: 1px;
+$border-widths: (
+        1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px
+) !default;
+
+$enable-shadows: false !default;
+$enable-gradients: false !default;
+$body-bg: $white;
+$body-color: $gray-700;
+$body-text-align: null !default;
+
+$alert-bg-level: -10;
+$alert-border-level: -8;
+$alert-color-level: 6;
+
+$btn-font-weight: 500;
+$btn-primary-color: $white;
+$btn-active-bg: $white;
+$btn-default-bg: $white;
+//$btn-default-border: #ccc;
+$btn-active-box-shadow: inset 0 3px 5px rgba($green, .125);
+$btn-font-size-sm: 14px;
+
+$btn-hover-bg-shade-amount: 15% !default;
+$btn-hover-bg-tint-amount: 15% !default;
+$btn-hover-border-shade-amount: 20% !default;
+$btn-hover-border-tint-amount: 10% !default;
+$btn-active-bg-shade-amount: 0% !default;
+$btn-active-bg-tint-amount: 0% !default;
+$btn-active-border-shade-amount: 25% !default;
+$btn-active-border-tint-amount: 10% !default;
+
+$form-select-focus-width: .2rem;
+$form-select-focus-box-shadow: 0 0 0 .2rem $green;
+$form-check-input-checked-color: $green;
+$form-check-input-checked-bg-color: $green;
+$form-check-input-checked-border-color: $green;
+$form-check-input-width: 1.4em;
+$form-label-color: $gray-800;
+$form-label-font-weight: 600;
+
+$form-feedback-invalid-color: $pink-200;
+$form-feedback-valid-color: $green;
+
+$component-active-bg: $green;
+
+//$tooltip-color: $white;
+$tooltip-bg: $gray-800;
+$tooltip-border-radius: 8px;
+
+$toast-max-width:  750px ;
+$toast-padding-x:  .75rem !default;
+$toast-padding-y:  .5rem !default;
+$toast-font-size:  .875rem !default;
+$toast-color:  null !default;
+$toast-border-radius:  8px !default;
+$toast-box-shadow:    0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 5px 20px rgba(0, 0, 0, 0.04), 0px 1px 4px rgba(0, 0, 0, 0.04) !default;
+$toast-background-color:  rgba($gray-900, .15) !default;
+
+$dropdown-border-radius: .5rem;
+$dropdown-min-width: 10rem;
+$dropdown-border-width: $border-width;
+$dropdown-link-color: $gray-900;
+
+
+$input-btn-focus-color-opacity: .25;
+$input-btn-focus-color: rgba($green, $input-btn-focus-color-opacity);
+$input-btn-focus-box-shadow: 0 0 .2 .2rem $green;
+$input-btn-focus-width: .2rem;
+
+$link-color: $gray-700;
+$link-decoration: underline;
+$link-shade-percentage: 20%;
+$link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-decoration: null;
+
+$striped-bg: $gray-100;
+$enable-reduced-motion: false;
+
+$font-size-base: .89rem; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25;
+$font-size-md: $font-size-base * 1.15;
+$font-size-sm: $font-size-base * 0.75;
+
+$popover-font-size: $font-size-md;
+
+$modal-content-bg: $gray-100;
+$modal-fade-transform: translateX(-50%);
+$modal-show-transform: translateY(9%);
+$modal-transition: transform .3s ease;
+$modal-scale-transform: scale(1);
+$modal-md: 650px;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 900px,
+        lg: 1060px,
+        xl: 1440px
+);
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1440px
+) !default;
+
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value") !default;
+
+
+$box-shadow: 0 .15rem 1.5rem rgba($gray-800, .075) !default;
+$box-shadow-green: 0 .125rem .25rem rgba($green, .075) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($green, .175) !default;
+$box-shadow-inset: inset 0 1px 2px rgba($green, .075) !default;
+$box-shadow-sm: 0 .13rem .13rem rgba($green, .075);
+
+$table-th-font-weight: 500;
+$table-border-color: #f4f4f4;
+$table-color: $body-color;
+$table-striped-color: $gray-100;
+// scss-docs-start border-radius-variables
+$border-radius: .25rem;
+$border-radius-sm: .2rem;
+$border-radius-lg: .3rem;
+$border-radius-pill: 50rem;
+$font-family-sans-serif: "Open Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif !default;
+
+$nav-tabs-link-active-color: $white;
+$headings-color: $gray-700;
+
+$h1-font-size: $font-size-base * 2;
+$h2-font-size: $font-size-base * 1.88;
+$h3-font-size: $font-size-base * 1.7;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * .89;
+$h6-font-size: .7;
+
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+        1: 5.5rem,
+        2: 4.2rem,
+        3: 4rem,
+        4: 3.5rem,
+        5: 3rem,
+        6: 2.5rem
+) !default;
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+        6: $spacer * 4,
+        7: $spacer * 5
+) !default;
+// scss-docs-end spacer-variables-maps
+
+body {
+  background-color: #accced40 !important;
+  color: $gray-900 !important;
+  font-weight: 400;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  color: $gray-900 !important;
+  font-weight: 600
+}
+
+h5 {
+  color: $gray-700 !important;
+  font-weight: 600 !important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem !important;
+}
+
+:focus-visible {
+  //  border: 2px solid $green40 !important;
+  box-shadow: 0 0 0 0.2rem rgba(87, 200, 150, 0.25) !important;
+  outline: none;
+}
+
+.dropdown-item {
+  color: $gray-700 !important;
+  font-size: 13px !important;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #dee2e6;
+}
+
+.nav.nav-pills {
+
+  & .nav-item {
+
+    & .nav-link {
+
+      padding: 3px 12px !important;
+    }
+  }
+}
+
+.logo {
+  width: 80%;
+  height: 80%;
+}
+
+.nav.nav-tabs {
+  border-bottom: none;
+  height: 32px;
+
+  & .nav-item {
+    height: fit-content;
+
+    &.show {
+      color: $gray-700 !important;
+    }
+
+    & .nav-link {
+      font-size: .89rem;
+      text-align: center;
+      height: 32px;
+      padding: 0 24px !important;
+      color: $gray-700 !important;
+      background-color: $gray-200 !important;
+      border: none;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 1px 1px rgba(0, 0, 0, 0.12);
+
+      &.active {
+        border: none;
+        color: $gray-700 !important;
+        background-color: $white !important;
+        border-radius: 4px 4px 0 0;
+      }
+    }
+  }
+}
+
+.nav.nav-tabs {
+  border-bottom: none;
+
+  &.nav-link {
+    font-size: .89rem;
+    color: $gray-700 !important;
+    background-color: $gray-200 !important;
+    border: none;
+    height: 32px;
+    padding: 0 24px !important;
+    // box-shadow:  0px 0px 2px rgba(0, 0, 0, 0.07), 0px 1px 1px rgba(0, 0, 0, 0.12);
+
+    &.active {
+      border: none;
+      color: $gray-700 !important;
+      background-color: $white !important;
+      // box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 1px 1px rgba(0, 0, 0, 0.12);
+      border-radius: 4px 4px 0 0;
+    }
+
+    &:hover {
+      border: none;
+      color: $gray-700 !important;
+    }
+  }
+}
+
+.nav-tabs .nav-link.active > span {
+  background-color: $gray-200 !important;
+  color: $gray-700 !important;
+}
+
+.nav-tabs .nav-link > span {
+  background-color: $gray-100 !important;
+  color: $gray-700 !important;
+}
+
+.btn {
+  border-radius: 4px;
+  color: $white !important;
+}
+
+.btn:disabled:hover, #saveChangesBtn:disabled:hover {
+  cursor: not-allowed !important;
+}
+
+.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+  pointer-events: inherit !important;
+}
+
+#exportBtn.dropdown-toggle-split::after, #exportBtn.dropup .dropdown-toggle-split::after, #exportBtn.dropend .dropdown-toggle-split::after {
+  margin-left: 0;
+  padding-left: 10px;
+}
+
+.btn.btn-white {
+  color: $gray-700 !important;
+  background-color: $white;
+  border: none !important;
+  box-shadow: $green !important;
+
+  &:hover {
+    color: $gray-700 !important;
+    background-color: $white !important;
+    border: none !important;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.07), 0 0 1px rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+#exportBtn:before {
+  content: "\e936";
+  font-family: "report-icons";
+  margin-right: 10px;
+}
+
+.btn-success-lt {
+  color: $gray-700 !important;
+  background-color: $success-lt;
+  box-shadow: none;
+}
+
+.btn-success {
+  background: linear-gradient(288.73deg, $green 32.67%, #10CA8C 71.76%);
+  border: 2px solid transparent;
+
+
+  &:hover {
+    background: linear-gradient(277.82deg, $green -163.05%, #10CA8C 66.75%) !important;
+    // border: 2px solid transparent;
+  }
+
+  &:focus {
+    background: linear-gradient(288.73deg, $green 32.67%, #10CA8C 71.76%) !important;
+    // border: 2px solid $green40;
+    box-shadow: 0 0 0 0.25rem rgba(87, 200, 150, 0.25);
+  }
+
+  &:active {
+    color: $green80 !important;
+    background-color: $white !important;
+    // border: 2px solid $green !important;
+    box-shadow: 0 0 0 0.25rem rgba(87, 200, 150, 0.25);
+  }
+
+  &:focus-visible {
+    //  border: 2px solid $green40 !important;
+    box-shadow: 0 0 0 0.2rem rgba(87, 200, 150, 0.25);
+    outline: none;
+  }
+}
+
+.btn.btn-lt {
+  color: $green !important;
+  background-color: $white !important;
+  border: 1px solid $green !important;
+
+  &:hover {
+    color: $green80 !important;
+    background: $white !important;
+    border: 1px solid $green80 !important;
+    box-shadow: none !important;
+  }
+
+  &:focus {
+    color: $green80 !important;
+    background: $white !important;
+    border: 2px solid $green !important;
+    box-shadow: 0 0 0 0.25rem rgba(87, 200, 150, 0.25);
+  }
+
+  &:active {
+    color: $green80 !important;
+    background-color: $white !important;
+    border: 2px solid $green !important;
+    box-shadow: 0 0 0 0.25rem rgba(87, 200, 150, 0.25);
+  }
+
+  &:disabled {
+    color: $gray-400 !important;
+    background-color: $white !important;
+    border: 2px solid $gray-400 !important;
+  }
+
+  &:focus-visible {
+    color: $green80 !important;
+    background: $white !important;
+    border: 2px solid $green40 !important;
+    box-shadow: 0 0 0 0.25rem rgba(87, 200, 150, 0.25);
+    outline: none;
+  }
+}
+
+.btn.btn-sm {
+  padding: 2px;
+}
+
+.btn-close-green:before {
+  content: "×";
+  line-height: 16px;
+  font-size: 20px;
+}
+
+.border-white-50 {
+  border: rgba(255, 255, 255, .5);
+}
+
+.rounded, .dropdown-menu {
+  border-radius: .5rem !important;
+  border-color: $white !important;
+}
+
+.collapse:not(.show) {
+  display: none !important;
+}
+
+.dropdown-menu {
+  font-size: 14px;
+  --bs-dropdown-min-width: inherit !important;
+  padding: .5rem !important;
+  color: $gray-900 !important;
+  min-width: inherit !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 5px 20px rgba(0, 0, 0, 0.04), 0px 1px 4px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04) !important;
+}
+
+.dropdown-toggle > i.icon-hamburger {
+  position: relative;
+  z-index: 111;
+}
+
+.dropdown-menu-end[data-bs-popper] {
+  right: 0 !important;
+  left: auto;
+}
+
+#savedReportFilters ~ .dropdown-menu.show {
+  width: 300px !important;
+}
+#createdLink:after {
+  display: none;
+}
+
+#createdDrop.dropdown-menu.show {
+  width: 275px;
+  height: 484px;
+  left: -31px !important;
+  padding-top: 50px;
+}
+
+.monthSelect, .yearSelect {
+  border: $gray-400 !important;
+}
+
+.daterangepicker.ltr.single.show-calendar.opensright {
+  right: 47px !important;
+}
+
+#dropOut {
+  position: absolute;
+  right: 24px;
+  top: 49px;
+  padding: 10px 30px 8px 18px !important;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  width: 185px;
+  z-index: 100;
+}
+
+.btn-primary {
+  color: $btn-primary-color !important;
+  background: $green !important;
+  border: none !important;
+
+  &:hover {
+    color: $btn-primary-color !important;
+    background: $green !important;
+    border: none !important;
+  }
+}
+
+.table th {
+  color: $gray-700 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-align: left;
+  white-space: nowrap !important;
+  text-transform: uppercase;
+}
+
+.table td {
+  color: $gray-700 !important;
+  font-size: 14px !important;
+  text-align: left;
+  border-bottom-color: $table-border-color !important;
+}
+
+.assg {
+  color: $gray-900 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-align: left;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  background-color: #FFEAE6;
+}
+
+input:-internal-autofill-selected {
+  background-color: $green40 !important;
+}
+
+#startDate, #endDate {
+  border-left: 0;
+}
+
+#schedule-report .modal-lg {
+  width: 650px !important;
+}
+
+.modal-header {
+  font-size: 20px;
+  padding: 1rem 1rem .5rem 1rem !important;
+}
+
+.modal-body {
+  background-color: $white;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  margin: 1rem;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.modal-footer {
+  border-top: none !important;
+}
+
+.modal .nav-pills .nav-link {
+  border-radius: 4px !important;
+  padding: 6px 8px !important;
+}
+
+.col-3 {
+  width: 24% !important
+}
+
+hr {
+  opacity: .8 !important;
+  margin: .8rem 0 !important
+}
+
+.fw-semi {
+  font-weight: 600;
+}
+
+.form-check-input {
+  font-size: 12px;
+}
+
+.form-check-input:checked {
+  background-color: $green !important;
+  border-color: $white !important;
+}
+
+.form-check-input:focus {
+  border-color: $green !important;
+  outline: 0;
+  box-shadow: ($form-select-focus-box-shadow, $input-btn-focus-color-opacity) !important;
+}
+
+.condensed tr td:nth-of-type(2) {
+  text-align: right !important;
+}
+
+.table {
+  vertical-align: middle !important;
+}
+
+
+div.dataTables_wrapper span.select-info,
+div.dataTables_wrapper span.select-item {
+  margin-left: 0.5em;
+}
+
+
+table.dataTable tbody td.select-checkbox:before, table.dataTable thead th.select-checkbox:before {
+  width: 1.4em !important;
+  height: 1.4em !important;
+  margin-top: 0.05em;
+  vertical-align: top;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid rgba(22,53,63,0.25) !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color-adjust: exact;
+}
+
+
+table.dataTable > tbody > tr > .selected {
+  color: white;
+  background-color: #00ba7c !important;
+}
+
+table.dataTable tbody td.select-checkbox, table.dataTable thead th.select-checkbox {
+  position: relative
+}
+
+table.dataTable tbody td.select-checkbox:before, table.dataTable tbody td.select-checkbox:after {
+  display: block;
+  position: absolute;
+  top: 1.2em;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box
+}
+
+table.dataTable tbody td.select-checkbox:before,  {
+  content: " ";
+  margin-top: -5px;
+  margin-left: -6px;
+  border-radius: 4px
+}
+
+table.dataTable thead th.select-checkbox:before {
+  content: " ";
+  left: 50%;
+  width: 20px !important;
+  height: 20px !important;
+  position: absolute;
+  margin-top: -19px;
+  margin-left: -6px;
+  border-radius: 4px
+}
+
+/*
+table.dataTable tr.selected td.select-checkbox:before, table.dataTable tr.selected th.select-checkbox:before {
+  border: 1px solid white
+}
+*/
+
+
+table.dataTable tr.selected td.select-checkbox:before, table.dataTable tr.selected th.select-checkbox:before,
+.select-checkbox:checked:before{
+  border: 1px solid $green !important;
+  opacity: .8;
+  outline: 0;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") !important;
+  background-color: $green !important;
+  color: #fff;
+  box-shadow: ($form-select-focus-box-shadow, $input-btn-focus-color-opacity) !important;
+}
+
+table.dataTable tr.selected td.select-checkbox:after, table.dataTable tr.selected th.select-checkbox:after,
+.select-checkbox:checked:after{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") !important;
+  background-color: $green !important;
+  color: #fff;
+}
+
+table.dataTable>tbody>tr.selected>* {
+  background-color: $gray-100 !important;
+  box-shadow: inset 0 0 0 9999px #fafafa !important;
+}
+
+#assgReport_wrapper table.dataTable thead > tr > th:hover {
+  cursor: move;
+}
+
+table.dataTable td.actions, table.dataTable thead th.actions {
+  text-align: right;
+  &:hover {
+    cursor: pointer;
+  }
+  & .dropdown-toggle:after {
+    content: '' !important;
+  }
+}
+
+  @media screen and (max-width: 640px) {
+    div.dataTables_wrapper span.select-info,
+    div.dataTables_wrapper span.select-item {
+      margin-left: 0;
+      display: block;
+    }
+  }
+
